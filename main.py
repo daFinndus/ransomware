@@ -15,7 +15,8 @@ if confirmation.lower() == "y" or confirmation.lower() == "yes":
     if encryption_confirmation.lower() == "y" or confirmation.lower() == "yes":
         encrypt.encrypt(folder_path)
     elif encryption_confirmation.lower() == "n" or encryption_confirmation.lower() == "no":
-        print("Okay. We will stop the program, you will have a new folder generated on your desktop.")
+        print("\nOkay. We will stop the program, you will have a new folder generated on your desktop.")
+        print("To showcase the encryption process restart the program. Your folder will be reused.")
         time.sleep(3)
         exit()
     else:
