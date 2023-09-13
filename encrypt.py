@@ -6,6 +6,7 @@ from cryptography.fernet import Fernet
 
 # Function to encrypt the files in a folder
 def encrypt(folder_path):
+    # Saving the amount of files in a variable
     num_files = 0
 
     # Generate a random key
@@ -21,11 +22,11 @@ def encrypt(folder_path):
 
     fernet = Fernet(key)
 
+    # Check if the folder exists
     if os.path.exists(folder_path):
         files = os.listdir(folder_path)
 
         for file_name in files:
-            # Saving the amount of files in a variable
             num_files += 1
 
             # Get the full path of the file within the folder
@@ -38,7 +39,13 @@ def encrypt(folder_path):
 
             with open(file_path, "wb") as file_encrypted:
                 file_encrypted.write(encrypted)
+    else:
+        print("It seems like the folder isn't there anymore. Please restart the application.")
+        time.sleep(3)
+        quit()
 
     print(f"\nDetected an amount of {num_files} files and encrypted every single one of them.")
     print(f"Encryption completed for files in '{folder_path}'.")
     time.sleep(3)
+
+    return key
