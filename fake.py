@@ -37,8 +37,9 @@ def fake():
                 file.write("This is a random file.")
 
         print(f"\n{num_files} random files have been successfully created in {folder_path} and filled with random content.")
+        time.sleep(3)
     else:
-        print("\nThe folder is already existing.")
+        print("\nWe noticed that the folder we will use is already existing, so we're just gonna use this one.")
         time.sleep(3)
 
     # Return the folder path after creation

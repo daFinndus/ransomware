@@ -16,7 +16,7 @@ def get_key():
             key = filekey.read()
 
     except FileNotFoundError:
-        print("\nSorry, but the file where the key should be stored, doesn't exist. We will proceed with a random key.")
+        print("\nSorry, but the file where the key should be stored, doesn't exist. That's alright tho, we will proceed with a random key.")
         time.sleep(3)
 
     return key

@@ -45,8 +45,8 @@ def encrypt(folder_path):
         quit()
 
     print(f"\nDetected an amount of {num_files} files and encrypted every single one of them.")
-    print(f"Encryption completed for files in '{folder_path}'.")
-    time.sleep(1)
+    print(f"Encryption completed for files in '{folder_path}'.\n")
+    time.sleep(3)
     print("You can check your folder out now, it should be on your desktop. Restart the application to decrypt the files.")
     time.sleep(3)
 

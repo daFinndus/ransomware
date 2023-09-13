@@ -4,19 +4,22 @@ import decrypt
 import encrypt
 import fake
 
-print("Hello and welcome to the REM application. This application will demonstrate how ransomware works.")
-time.sleep(3)
-print("It'll not touch any of your personal files, it'll create a new folder with its own files.")
-time.sleep(1)
-print("Be careful tho, if you have a folder named 'REM', please do not execute this application or all of your files will be encrypted.")
-time.sleep(3)
-print("Of course there is also the ability to decrypt the files again, but we shouldn't risk it.")
-time.sleep(3)
-print("Have fun!\n")
-time.sleep(1)
+introduction_confirmation = input("Display introduction? [y/n] ")
+
+if introduction_confirmation.lower() == "y" or introduction_confirmation.lower() == "yes":
+    print("Hello and welcome to the REM application. This application will demonstrate how ransomware works.")
+    time.sleep(3)
+    print("It'll not touch any of your personal files, it'll create a new folder with its own files.")
+    time.sleep(3)
+    print("Be careful tho, if you have a folder named 'REM', please do not execute this application or all of your files will be encrypted.")
+    time.sleep(5)
+    print("Of course there is also the ability to decrypt the files again, but we shouldn't risk it.")
+    time.sleep(3)
+    print("Have fun!")
+    time.sleep(3)
 
 # Check if the user really wants to execute the application
-confirmation = input("Hey, do you wanna create an encryption sample? [y/n] ")
+confirmation = input("\nHey, do you wanna create an encryption sample? [y/n] ")
 
 if confirmation.lower() == "y" or confirmation.lower() == "yes":
     # Create a folder to use for the encryption process
@@ -39,13 +42,13 @@ if confirmation.lower() == "y" or confirmation.lower() == "yes":
             quit()
     else:
         # Ask if the files should be encrypted
-        encryption_confirmation = input("\nDo you wanna encrypt them now? [y/n] ")
+        encryption_confirmation = input("\nDo you wanna encrypt the files now? [y/n] ")
 
         if encryption_confirmation.lower() == "y" or confirmation.lower() == "yes":
             # Encrypt each file of the certain folder
             encrypt.encrypt(folder_path)
         elif encryption_confirmation.lower() == "n" or encryption_confirmation.lower() == "no":
-            print("\nOkay. We will stop the program, you will have a new folder generated on your desktop.")
+            print("\nOkay. We will stop the program, you will have a new folder called 'REM' generated on your desktop.")
             print("To showcase the encryption process restart the program. Your folder will be reused.")
             time.sleep(3)
             quit()
@@ -57,6 +60,8 @@ if confirmation.lower() == "y" or confirmation.lower() == "yes":
             quit()
 elif confirmation.lower() == "n" or confirmation.lower() == "no":
     print("Okay, have a great day tho!")
+    time.sleep(1)
+    print("The application will quit now.")
     time.sleep(3)
     quit()
 else:
