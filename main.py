@@ -1,12 +1,22 @@
-import os
 import time
 
 import decrypt
 import encrypt
 import fake
 
+print("Hello and welcome to the REM application. This application will demonstrate how ransomware works.")
+time.sleep(3)
+print("It'll not touch any of your personal files, it'll create a new folder with its own files.")
+time.sleep(1)
+print("Be careful tho, if you have a folder named 'REM', please do not execute this application or all of your files will be encrypted.")
+time.sleep(3)
+print("Of course there is also the ability to decrypt the files again, but we shouldn't risk it.")
+time.sleep(3)
+print("Have fun!\n")
+time.sleep(1)
+
 # Check if the user really wants to execute the application
-confirmation = input("Hey, do you wanna create a encryption sample? [y/n] ")
+confirmation = input("Hey, do you wanna create an encryption sample? [y/n] ")
 
 if confirmation.lower() == "y" or confirmation.lower() == "yes":
     # Create a folder to use for the encryption process

@@ -1,7 +1,6 @@
 # Module to create some fake files to encrypt
 
 import os
-import shutil
 
 import random
 import string
